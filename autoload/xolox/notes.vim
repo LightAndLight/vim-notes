@@ -619,11 +619,19 @@ function! xolox#notes#buffer_is_note() " {{{2
   endif
 endfunction
 
+function! xolox#notes#is_latex_comment(s)
+  if match(a:s,'^%.*$') == 0
+    return 1
+  else
+    return 0
+  endif
+endfunction
+
 function! xolox#notes#current_title() " {{{2
   " Get the title of the current note.
   let title = getline(1)
   let trimmed = xolox#misc#str#trim(title)
-  if title != trimmed
+  if title != trimmed && !xolox#notes#is_latex_comment(title)
     call setline(1, trimmed)
   endif
   return trimmed
