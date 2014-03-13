@@ -18,3 +18,5 @@ test.note
 \end{document}
 
 ```
+
+For information on vim-notes usage see: https://github.com/xolox/vim-notes/blob/master/README.md
