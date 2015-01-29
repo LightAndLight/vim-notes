@@ -4,7 +4,8 @@ conjunction with vim-notes.
 
 Example:
 
-test.note
+`test.note`
+
 ```TeX
 %test
 
